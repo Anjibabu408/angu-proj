@@ -1,0 +1,60 @@
+
+
+<div *ngIf ="mobile" class="container head">
+
+    <div class="headers">
+         <h3 class="table-title">Manage Mobiles</h3>
+         <button class="btn btn-primary right" (click) = "openform(mobiledata)">Add Mobile</button>
+    </div>
+
+    <table class="table">
+        <thead class="text-center">
+            <tr>
+                <th>Name</th>
+                <th>Price(Rs)</th>
+                <th>Ram</th>
+                <th>Storage</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor = "let m of mobiledata, index as i">
+                <td>{{m['Name']}}</td>
+                <td>{{m['Price']}}</td>
+                <td>{{m['Ram']}}</td>
+                <td>{{m['Storage']}}</td>
+                <td><button class="btn btn-primary" (click)="editform()">Edit</button></td>
+                <td><button class="btn btn-danger" (click) = "removemobile(i)">Delete</button></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+<!-- Add mobile component adds here -->
+
+<div class="form-wrapper" *ngIf = "showform">
+   <div class="mobile-form">
+        <h2 class="text-center">Add Mobile</h2>
+        <div class="group">
+            <label for="">Name:</label>
+            <input type="text" class="form-control" [(ngModel)] = "mobileName" name = "mobileName" required>
+        </div>
+        <div class="group">
+           <label for="">Price:</label>
+           <input type="text" class="form-control" [(ngModel)] = "Price" name = "Price" required>
+      </div>
+      <div class="group">
+           <label for="">Ram:</label>
+           <input type="text" class="form-control" [(ngModel)] = "Ram" name = "Ram" required>
+       </div>
+      <div class="group">
+          <label for="">Storage:</label>
+          <input type="text" class="form-control" [(ngModel)] = "Storage" name = "Storage" required>
+      </div>
+      <div class="action">
+            <button class="btn btn-primary">Save Changes</button>
+            <button class="btn btn-danger" (click) = "closeform()">Cancel</button>
+      </div>
+   </div>
+</div>
+</div>

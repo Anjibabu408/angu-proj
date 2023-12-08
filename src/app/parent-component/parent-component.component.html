@@ -1,0 +1,18 @@
+
+
+
+<app-child-component [cdata] = "pdata" [cdata1] = "pdata1" (childdata) = "parentdata = $event" #tmpref></app-child-component>
+
+<h1>{{parentdata}}</h1>
+
+<!-- by template reerence variable -->
+
+<h1>{{tmpref.tempref}}</h1>
+
+<h1>{{tmpref.template()}}</h1>
+
+<!-- by using viewchild  -->
+
+<button (click) = "test()">click</button>
+
+<h1>{{vichild}}</h1>

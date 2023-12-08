@@ -1,0 +1,10 @@
+
+
+<h2 class="text-center text-danger mt-4">Todotask List</h2>
+<div class="row">
+    <ul class="list-group col-6 m-auto mt-4">
+        <li class="list-group-item" *ngFor = " let tdl of tdlist, index as i">{{tdl.taskname}}
+            <button class="btn btn-danger tlbtn" (click) = "removetodo(i)">&#215;</button>
+        </li>
+    </ul>
+</div>

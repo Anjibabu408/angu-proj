@@ -1,0 +1,35 @@
+
+<!-- String interpolation starts-->
+
+<h1>{{data}}</h1>
+<img src = {{path}} alt ="no image found">
+<h1>String interpolation ends</h1>
+
+<!-- String interpolation end-->
+
+<!-- property binding starts-->
+
+<input type="text" [disabled] = "isdisabled" placeholder="set true disabled">
+<input type="text" [hidden] = "ishidden" placeholder="set true  hidden">
+
+<!-- property binding ends-->
+
+<!-- event binding starts-->
+
+<h1>{{count}}</h1>
+<button (click) = "increment()">increment</button>
+<button (click) = "decrement()">decrement</button>
+<br />
+<input type="text" name = "anji" (input) = "changename($event)">
+<h1>{{name}}</h1>
+
+<!-- event binding ends-->
+
+<!-- Two way data binding starts here -->
+
+<input type="text" [(ngModel)] = "city">
+
+<h1>{{city}}</h1>
+<button (click) = "updatecity()">Update</button>
+
+<!-- Two way data binding ends here -->

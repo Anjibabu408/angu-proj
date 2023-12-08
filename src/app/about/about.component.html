@@ -1,0 +1,21 @@
+<p>about works!</p>
+
+<div *ngFor = "let m of mobile">{{m}}</div>
+
+<br />
+
+<table border="1px solid red">
+    <tr><td>name</td>
+    <td>gender</td>
+    <td>physics</td>
+    <td>maths</td>
+    <td>english</td></tr>
+
+    <tr *ngFor = "let s of student">
+     <td> {{ s.name}}</td> 
+     <td> {{ s.gender}}</td> 
+     <td> {{ s.physics}}</td> 
+     <td> {{ s.maths}}</td> 
+     <td> {{ s.english}}</td> 
+    </tr>
+</table>

@@ -1,0 +1,21 @@
+
+<!-- parent to child communication -->
+
+<h1>{{cdata}}</h1>
+
+<h1>{{cdata1}}</h1>
+
+<table>
+    <tr *ngFor = " let n of cdata1">{{n}}</tr>
+</table>
+
+<!-- child to parent data communication -->
+
+<button (click) = "passtoparent()">send to parent</button>
+
+<input type = "text" (input) = "updatemsg($event)">
+
+<!--  viewchild component data transfer -->
+<br />
+viewchid:
+<input type="text" [(ngModel)] = "viewchilddata">

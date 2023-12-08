@@ -1,0 +1,61 @@
+<!--NgIf starts here-->
+
+<h1 *ngIf = "show">{{data}}</h1>
+<h1 *ngIf = "!show">No data found</h1>
+
+<!--NgIf ends here-->
+
+<!--NgIf with else starts here-->
+
+<h1 *ngIf = "!show; else sample">No data found...</h1>
+<ng-template #sample>{{data}}</ng-template>
+
+<!--NgIf with else ends here-->
+
+<!--NgIf with then and else starts here-->
+
+<h1 *ngIf = "hide ; then open ; else load"></h1>
+<ng-template #open>{{num}}</ng-template>
+<ng-template #load> loading..</ng-template>
+
+<!--NgIf with then and else endSe4s here-->
+
+<!--Ngfor starts here-->
+
+<table border="1px solid red">
+    <tr *ngFor="let m of movies">{{m}}</tr>
+    <tr>
+        <td>name</td>
+        <td>gender</td>
+        <td>physics</td>
+        <td>maths</td>
+        <td>english</td>
+    </tr>
+    <tr *ngFor="let s of student">
+        <td>{{s.name}}</td>
+        <td>{{s.gender}}</td>
+        <td>{{s.physics}}</td>
+        <td>{{s.maths}}</td>
+        <td>{{s.english}}</td>
+    </tr>
+</table>
+
+<!--NgFor ends here-->
+
+<!--Test pipe used here-->
+
+<h1>{{person | test : wish : wishes}}</h1>
+
+<!--Test pipe used end here-->
+
+<!--Template reference variable  example used starts here-->
+
+<input type="text" placeholder="enter email" #e value ="anjibabu">
+<!-- #e is template reference variable -->
+<h1>{{e.value}}</h1>
+
+<input type="text" placeholder="enter email" #d value ="honey">
+<h1>{{email}}</h1>
+<button (click) = "updatemail(d)">update</button>
+
+<!--Template reference variable  example used ends here-->
