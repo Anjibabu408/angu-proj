@@ -161,7 +161,7 @@ if __name__ == "__main__":
     5 - update master branch 
     ------------------------------------------------------------------
         ''')
-    option= int(input("select your option:"))
+    option= int(input("select your option: "))
 
     if option == 1:
         checkout_to_master()    
@@ -177,7 +177,7 @@ if __name__ == "__main__":
                 print("Do not commit or push any changes as you are in master branch")
             else: 
                 print(f"You are in {current_branch} feature branch")
-                option1= input(f"do you want to update {current_branch} feature branch with latest master before commiting ? if yes press y , else press Enter to continue")
+                option1= input(f"do you want to update {current_branch} feature branch with latest master before commiting ? if yes press y , else press Enter to continue: ")
                 if option1 == 'y':
                     git_pull_origin_master()
                 git_status()
